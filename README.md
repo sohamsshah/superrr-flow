@@ -2,7 +2,7 @@
 
 A native Switch workflow: a customer posts in Discord, intake classifies the message, and a specialist receives a targeted handoff in Slack. Bugs are tracked in Google Sheets; feature requests are tracked in a Switch room document. Original customer room, message, and thread references travel with every handoff.
 
-**Status: packaged reconstruction; Switch's installed offline checks pass; live import is not yet verified.** This repository was reconstructed from the agreed workflow, with the bug agent's local standing instructions inspected for comparison. It is not an export of the running server configuration. See [verification status](docs/verification.md).
+**Status: live import and fresh-prefix provisioning verified after a Google Workspace grant fix; end-to-end behavior remains unverified.** This repository was reconstructed from the agreed workflow, with the bug agent's local standing instructions inspected for comparison. It is not an export of the original running server configuration. See [verification status](docs/verification.md) and the [rehearsal findings](docs/rehearsal-2026-11-06.md).
 
 ## What you download
 

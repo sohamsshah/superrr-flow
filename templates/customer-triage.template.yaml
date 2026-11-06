@@ -1,6 +1,6 @@
 # Native Switch v1 group template. Instructions are inline: no external prompt
 # files, existing agent IDs, or private server resource IDs are needed.
-# NOT YET LIVE-IMPORTED. See docs/verification.md before claiming reproducibility.
+# Live import/provisioning checked; behavioral tests pending. See docs/verification.md.
 version: 1
 params:
   team:
@@ -105,8 +105,9 @@ agents:
     auto_mode: true
     auto_approve: false
     connections:
-      - service: google-workspace
-        access: write
+      # Pass-through connector grants inherit the connected account's access.
+      # Switch rejects access/tools overrides for Google Workspace at runtime.
+      - google-workspace
     instructions: |
       You own bug tracking in {team}-customer-bugs. Accept TRIAGE_HANDOFF from
       {team}-intake and explicit tracking/update instructions from your owner.

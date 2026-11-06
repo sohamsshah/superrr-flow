@@ -9,6 +9,8 @@
 - Agent management enabled if provisioning managed agents. Console/provider behavior differs by installed version; a preview or run error must be resolved before testing.
 - Google Workspace connected for writing on that server. An operator may first need to configure its Google OAuth app. Only bug-agent gets the grant. Everyone installing supplies their own connection; OAuth secrets are not part of this repo.
 
+Google Workspace is a pass-through connector: the template grants `google-workspace` without an `access` or `tools` override. Its effective access comes from your connected Google account. An `access: write` override passes offline template checks but is rejected during provisioning.
+
 ## Import
 
 Import templates/customer-triage.template.yaml from the Templates page. Pick an unused prefix such as `repro-a`. Pick the actual Discord and Slack bridges by their display names and your online machine/location. Verify the resolved agent directories are distinct. Review all three agents and rooms before creation.

@@ -68,7 +68,7 @@ for (const kind of ['bug', 'feature']) {
     assert.ok(resolved.links.some(l => l.from === from && l.to === to), `Missing room link: ${from} -> ${to}`);
   }
 }
-assert.deepEqual(agents.get('repro-a-bug-agent').connections, [{ service: 'google-workspace', access: 'write' }]);
+assert.deepEqual(agents.get('repro-a-bug-agent').connections, ['google-workspace'], 'Google Workspace pass-through grants must not set access/tools overrides');
 assert.equal(agents.get('repro-a-feature-agent').connections, undefined);
 for (const link of resolved.links) assert.ok(rooms.has(link.from) && rooms.has(link.to));
 console.log('PASS: YAML parsed; inputs resolved; three agents/rooms; distinct folders; targeted-handoff memberships; private Slack rooms; scoped connector assignment; valid room links and kickoff targets.');
