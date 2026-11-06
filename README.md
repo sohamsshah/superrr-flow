@@ -1,4 +1,4 @@
-# Switch Customer Triage
+# Superrr Flow — Switch Customer Triage
 
 A native Switch workflow: a customer posts in Discord, intake classifies the message, and a specialist receives a targeted handoff in Slack. Bugs are tracked in Google Sheets; feature requests are tracked in a Switch room document. Original customer room, message, and thread references travel with every handoff.
 
